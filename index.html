@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management</title>
+    <style>
+        th, td {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quản lý sinh viên</h1>
+    <div>
+        <form action="" id="student-form">
+            <label for=""> Student Code</label>
+            <input type="text" id="code">
+            <br>
+            <label for="">Student's Name</label>
+            <input type="text" id="name">
+            <br>
+            <label for="">Email</label>
+            <input type="text" id="email">
+            <br>
+            <label for="">Math</label>
+            <input type="text" id="math">
+            <br>
+            <label for="">Physics</label>
+            <input type="text" id="physics">
+            <br>
+            <label for="">Chemistry</label>
+            <input type="text" id="chemistry">
+        </form>
+        <button onclick="addNewStudent()">Add students</button>
+
+        <button onclick="resetStudents()">Delete Students</button>
+
+        <button onclick="saveChange()">Save Changes</button>
+
+        <table border="1" style="border-collapse: collapse; width: 600px">
+            <thead>
+                <th>Student Code</th>
+                <th>Student's Name</th>
+                <th>Email</th>
+                <th>Average Score</th>
+                <th>Options</th>
+            </thead>
+            <tbody id="student-table"></tbody>
+        </table>
+    </div>
+
+    <script src="./js/model/Student.js"></script>
+
+    <script src="./js/controller/index.js"></script>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
